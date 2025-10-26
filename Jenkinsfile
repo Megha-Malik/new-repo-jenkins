@@ -22,7 +22,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                echo 'Deploying... to apache server'
+                sh 'sudo cp -r * /var/www/html/'
             }
         }
     }
